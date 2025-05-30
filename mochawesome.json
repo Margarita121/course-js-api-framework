@@ -1,0 +1,140 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-26T12:59:38.506Z",
+    "end": "2025-05-26T12:59:38.579Z",
+    "duration": 73,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fc3cb1e9-887b-4b91-b22d-6e82803d431f",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [
+        {
+          "title": "\"before all\" hook in \"{root}\"",
+          "fullTitle": "\"before all\" hook in \"{root}\"",
+          "timedOut": false,
+          "duration": 2,
+          "state": null,
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "await generateTestData()",
+          "err": {},
+          "uuid": "a3e1f1c6-1b0b-45d7-9c89-3cbd0831dd53",
+          "parentUUID": "fc3cb1e9-887b-4b91-b22d-6e82803d431f",
+          "isHook": true,
+          "skipped": false
+        }
+      ],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "List books",
+          "fullTitle": "List books",
+          "timedOut": false,
+          "duration": 1,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "describe(`List books`, () => {\n    getBooks()\n})",
+          "err": {},
+          "uuid": "5bbbfdf4-7aa7-41cb-b693-e15349815bb0",
+          "parentUUID": "fc3cb1e9-887b-4b91-b22d-6e82803d431f",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [
+        {
+          "uuid": "7bdae9d3-bc4c-4362-bb63-26ccd2946552",
+          "title": "List books",
+          "fullFile": "/api-tests/tests/scenarios/books/list_books.js",
+          "file": "/tests/scenarios/books/list_books.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Retrieve list of all books",
+              "fullTitle": "List books Retrieve list of all books",
+              "timedOut": false,
+              "duration": 48,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await request(this, 'GET', '/books', undefined, false, \n    {\n        statusCode : 200,\n        expectedFields: [\n            '0.id',\n            '7.id',\n        ],\n        expectedValues: [\n                            {path: '0.id', value: 10},\n                            // {path: '6.id', value: 7},\n                        ]\n    }\n)",
+              "err": {},
+              "uuid": "3373defc-06ee-4868-a4a1-98c50cf98a83",
+              "parentUUID": "7bdae9d3-bc4c-4362-bb63-26ccd2946552",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3373defc-06ee-4868-a4a1-98c50cf98a83"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 48,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 20000
+        }
+      ],
+      "passes": [
+        "5bbbfdf4-7aa7-41cb-b693-e15349815bb0"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 1,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 20000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.8.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.2.0"
+    }
+  }
+}
