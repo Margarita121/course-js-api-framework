@@ -38,3 +38,4 @@ $env - environment
 Test new line
 
 new line
+test
